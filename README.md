@@ -26,10 +26,10 @@ We use Gemini Pro for its multimodal capabilities, but we don't trust it blindly
 - **Grounding**: Uses Google Search to verify proper nouns, historical facts, and spelling (e.g., ensuring "Elijah Pierce" is spelled correctly based on context).
 - **Reasoning over Narratives**: The prompt instructs the model to reason frame-by-frame, ensuring that descriptions fill the *gaps* in dialogue without colliding with speech.
 
-### 2. 🗂️ Handling 400MB File Limits
-Gemini API has a strict 400MB file size limit for uploads. `open-vtt` handles this automatically:
-- **Smart Downsampling**: If your video is >400MB, it triggers an `ffmpeg` cascade.
-- **Resolution Preservation**: It tries `10fps 1080p` -> `5fps 1080p` -> `5fps 720p` -> `1fps 480p` until the file fits. This ensures the AI always sees the highest possible resolution allowed by the budget.
+### 2. 🗂️ Handling File Limits
+Gemini API often has a file size limit for video uploads. `open-vtt` handles this automatically:
+- **Smart Downsampling**: If your video is greater than a limit, it triggers an `ffmpeg` cascade.
+- **Resolution Preservation**: It tries reducing both resolution and frame rate until it is allowed by the file size budget.
 
 ### 3. 🗣️ Robust Transcription Fallback
 A VTT file needs a "Canonical Timeline" to be accurate.
