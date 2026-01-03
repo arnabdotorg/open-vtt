@@ -1,4 +1,4 @@
-# 🔆 open-vtt
+# 🔆 open-vtt: AI-generated Extended Audio Descriptions
 
 **open-vtt** is a robust AI-powered pipeline for generating **Extended Audio Descriptions (Extended AD)**, addressing a critical requirement for the upcoming regulatory and compliance targets for accessibility.
 
