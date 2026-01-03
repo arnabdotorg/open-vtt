@@ -102,7 +102,7 @@ Tweak the model behavior in `config.json`:
 ```json
 {
     "gemini": {
-        "model": "gemini-2.5-pro-preview-06-05",
+        "model": "gemini-3-pro-preview",
         "temperature": 0.7,
         "thinking": "high",   // "high" | "low"
         "grounding": {
