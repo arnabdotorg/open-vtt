@@ -1,0 +1,63 @@
+{
+    "gemini": {
+        "model": "gemini-3-pro-preview",
+        "temperature": 0.7,
+        "max_output_tokens": 65536,
+        "thinking": "high",
+        "grounding": {
+            "enabled": true,
+            "source": "google_search"
+        }
+    },
+    "video": {
+        "max_size_mb": 400,
+        "downsample_targets": [
+            {
+                "fps": 10,
+                "resolution": "1920x1080",
+                "label": "10fps 1080p"
+            },
+            {
+                "fps": 5,
+                "resolution": "1920x1080",
+                "label": "5fps 1080p"
+            },
+            {
+                "fps": 5,
+                "resolution": "1280x720",
+                "label": "5fps 720p"
+            },
+            {
+                "fps": 1,
+                "resolution": "854x480",
+                "label": "1fps 480p"
+            }
+        ]
+    },
+    "transcription": {
+        "language": "en"
+    },
+    "files": {
+        "prompt": "prompts/gemini_vtt_prompt.md"
+    },
+    "cloud-bucket": {
+        "local": false,
+        "localPath": "../media",
+        "url": "https://pub-a78368edbf6d4a1e8ef26b558c7fa9fc.r2.dev",
+        "video": [
+            "elijah-folklore.mp4",
+            "golden-knights.mp4",
+            "ohio-extension.mp4",
+            "The German Hour.mp4",
+            "WORDS OF WILDERNESS.mp4"
+        ],
+        "vtt": [
+            "elijah-merged.vtt",
+            "golden-knights.vtt",
+            "ohio-extension.vtt",
+            "The German Hour.vtt",
+            "output-ohio-extension.vtt",
+            "WORDS OF WILDERNESS.vtt"
+        ]
+    }
+}
