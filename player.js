@@ -22,9 +22,17 @@
 
 // Browser detection for TTS tuning
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+const isChrome = /chrome/i.test(navigator.userAgent) && !/edge|edg/i.test(navigator.userAgent);
+
+// TTS rate: hand-tuned for Chrome (1.4) and Safari (1.2), default (1.0) for others (Firefox, etc.)
+const getTTSRate = () => {
+    if (isChrome) return 1.4;
+    if (isSafari) return 1.2;
+    return 1.0;  // Default rate for Firefox and other browsers
+};
 
 const CONFIG = {
-    TTS_RATE: isSafari ? 1.2 : 1.4,  // Safari sounds better at 1.2, Chrome needs 1.4
+    TTS_RATE: getTTSRate(),
     TTS_FEMALE_VOICES: ['Samantha', 'Microsoft Zira', 'Google US English Female', 'Karen'],
     TTS_MALE_VOICES: ['Alex', 'Daniel', 'Tom', 'Lee', 'Ralph', 'Aaron', 'Microsoft David', 'Google US English Male', 'Fred'],
     DEBUG: true  // Enable for subtitle detection debugging
