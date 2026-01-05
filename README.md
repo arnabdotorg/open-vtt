@@ -7,6 +7,7 @@ It uses ffmpeg, Gemini, and Whisper to generate high-quality, accessible extende
 Once generated, the enhanced VTT files can be used with the built-in player or with any other player that supports WebVTT subtitles.
 
 _🍌-generated Overview Diagram_
+
 <img height="300" alt="image" src="https://github.com/user-attachments/assets/f333e38d-0c06-4ed2-a097-2d7c4a92bc65" />
 
 
