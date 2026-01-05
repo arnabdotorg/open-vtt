@@ -2,7 +2,7 @@
 
 **open-vtt** is a robust AI-powered pipeline for generating **Extended Audio Descriptions (Extended AD)**, addressing a critical requirement for the upcoming regulatory and compliance targets for accessibility.
 
-It uses ffmpeg, Gemini, and Whisper to generate high-quality, accessible extended AD WebVTT subtitles that capture visual and semantic context to meet W3C and WCAG standards. This approach is typically under a dollar **10x-20x cheaper** than commercial services, and is **automatable**: only a few minutes to process per video.
+It uses ffmpeg, Gemini, and Whisper to generate high-quality, accessible extended AD WebVTT subtitles that capture visual and semantic context to meet W3C and WCAG standards. This approach is typically under a dollar, **10x-100x cheaper** than commercial services, and is **automatable**: only a few minutes to process per video.
 
 Once generated, the enhanced VTT files can be used with the built-in player or with any other player that supports WebVTT subtitles.
 
@@ -54,6 +54,9 @@ The output generates a structured document using standard WebVTT semantic tags:
 - **`<v Speaker>`**: Speaker identification for the deaf.
 - **`<v Curatorial>`**: Special extended notes for researchers (pauses the player).
 - **`[Sound Effects]`**: DCMP-style bracketed cues for non-speech audio.
+
+### 5. 😶‍🌫️ Hallucinations and Errors
+LLMs make mistakes. We reduce these by using native subtitles if available, grounding the output using Web Search, and using a two-phase reasoning process. Since human transcriptions also have errors, these techniques can be adapted to human transcription as well. The goal for this tool is not to produce gold-standard descriptions, but to provide a path to feasibility when **no reasonable alternative exists**. We recommend using this tool as a starting point, and then manually editing the output to improve accuracy.
 
 ---
 
