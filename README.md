@@ -15,7 +15,7 @@ Standard AI captioning tools often fail to meet professional accessibility guide
 - They do not differentiate between **curatorial context** (educational notes) and **visual description** (what is happening).
 
 ---
-## Demo link & Player Screenshot ([try demo here]([url](https://arnabdotorg.github.io/open-vtt/player.html)))
+## Demo link & Player Screenshot ([try demo here](https://arnabdotorg.github.io/open-vtt/player.html))
 
 <img height="400" alt="image" src="https://github.com/user-attachments/assets/15a36624-5e1f-4cce-ac70-2c873a5af92e" />
 
